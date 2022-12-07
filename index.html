@@ -7,99 +7,101 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Patua+One&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,500;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap"
       rel="stylesheet"
     />
+    <title>Register Page</title>
+
     <link rel="stylesheet" href="style.css" />
-    <title>Register Form</title>
   </head>
   <body>
-    <h1>REGISTER FORM</h1>
-    <form action="">
-      <div class="form-content">
+    <h1>REGISTER PAGE</h1>
+
+    <form action="" method="post">
+      <div>
         <label for="firstname">First Name:</label>
         <input
+          class="inputs"
           type="text"
           name="firstname"
           id="firstname"
-          placeholder="Enter your first name"
+          required
         />
       </div>
 
-      <div class="form-content">
+      <div>
         <label for="lastname">Last Name:</label>
         <input
+          class="inputs"
           type="text"
           name="lastname"
           id="lastname"
-          placeholder="Enter your last name"
-        />
-      </div>
-      <div class="form-content">
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter your email"
+          required
         />
       </div>
 
-      <div class="form-content">
+      <div>
+        <label for="email">Email:</label>
+        <input class="inputs" type="email" name="email" id="email" required />
+      </div>
+
+      <div>
         <label for="password">Password:</label>
         <input
-          type="text"
+          class="inputs"
+          type="password"
           name="password"
           id="password"
-          placeholder="Enter your password"
+          required
         />
       </div>
 
-      <div class="form-content">
-        <label for="day-of-birth">Day of Birth:</label>
-        <input
-          type="date"
-          name="day-of-birth"
-          id="day-of-birth"
-          placeholder="Enter your birthday"
-        />
+      <div>
+        <label for="dob">Day of Birth:</label>
+        <input class="inputs" type="date" name="dob" id="dob" />
       </div>
 
-      <div class="form-content">
+      <div>
         <label for="phone">Phone:</label>
-        <input
-          type="tel"
-          name="phone"
-          id="phone"
-          placeholder="Enter your phone number"
-        />
+        <input class="inputs" type="tel" name="phone" id="phone" />
       </div>
 
-      <div class="form-content">
-        <label for="adress">Phone:</label>
+      <div class="address-container">
+        <label for="address">Adress:</label>
         <textarea
-          name="adress"
-          id="adress"
-          placeholder="Enter your adress"
+          class="inputs"
+          name="address"
+          id="address"
+          rows="5"
         ></textarea>
       </div>
 
-      <div class="form-content">
+      <div>
         <label for="country">Country:</label>
-        <select name="countries" id="countries">
-          Select Country
-          <option value="turkey">Turkey</option>
-          <option value="usa">USA</option>
-          <option value="germany">Germany</option>
-          <option value="netherland">Netherlan</option>
-          <option value="greece">Greece</option>
+        <select class="inputs" name="country" id="country">
+          <option value="">Select Country</option>
+          <option value="Turkey">Turkey</option>
+          <option value="Germany">Germany</option>
+          <option value="Netherland">Netherland</option>
+          <option value="Greece">Greece</option>
+          <option value="UK">UK</option>
+          <option value="USA">USA</option>
         </select>
       </div>
 
-      <div class="form-content">
+      <div>
         <label for="gender">Gender:</label>
-        <input type="radio" name="gender" id="gender" value="male" />Male
-        <input type="radio" name="gender" id="gender" value="female" />Female
+        <div class="gender-info">
+          <input class="radios" type="radio" name="gender" id="male" checked />
+          <label class="gender-label" for="male">Male</label>
+          <input class="radios" type="radio" name="gender" id="female" />
+          <label class="gender-label" for="female">Female</label>
+        </div>
+      </div>
+
+      <div>
+        <input class="buttons" type="submit" value="Save" />
+        <input class="buttons" type="reset" value="Clear" />
       </div>
     </form>
   </body>
